@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+   <link rel="stylesheet" href="./anilAdventure.css">
+   <script src="./anilAdventure.js" defer></script>
+</head>
+<body>
+    <div id="home">
+        <div id="navbar">
+            <img id="logo" src="./logo.png">
+            <div id="iconcontainer">
+                <img class="icons" src="./search.png" onclick="searchopen()">
+                <img class="icons" src="./avatar.png" onclick="openWelCome()">
+                <img class="icons" src="./menu.png" onclick="menuslide()">
+            </div>
+            <div id="welcome">
+                <div id="closeWelCome" onclick="CloseWelCome()"><span>X</span></div>
+                <h1 id="custamerName"></h1>
+            </div>
+            <div id="navbuttons">
+                <a href="#cardscont"><input class="buttnav" type="button" value="Bookings"></a>
+                <a href="#travelstyle"><input class="buttnav" type="button" value="Travel Styles"></a>
+                <a href="#guidecont"><input class="buttnav" type="button" value="Travel Guide"></a>
+                <a href="#cantactCont"><input class="buttnav" type="button" value="CantactUs"></a>
+            </div>
+        </div>
+        <div id="searchcont">
+            <input id="searchbox" type="Search...." placeholder="Search">
+            <span id="searchClose" onclick="searchclose()">X</span>
+        </div>
+        <video id="vidbg" src="./vidmix.mp4" autoplay muted loop></video>
+
+        <div id="menubar">
+            <span id="close" onclick="menuslideClose()">X</span>
+            <div id="sublist">
+                <p class="sli">Home</p>
+                <p class="sli">Vlogs</p>
+                <p class="sli">Cantact Us</p>
+            </div>
+        </div>
+        <div id="socialmedia">
+            <a href="https://web.whatsapp.com/" target="_blank"><h2 class="followus">Follow On</h2><img class="socials" src="./WhatsApp icon.png"></a>
+        </div>
+        <div id="socialmedia1">
+            <a href="https://instagram.com/anil_prathapagiri?igshid=NGExMmI2YTkyZg=="target="_blank"><h2 class="followus">Follow On</h2><img class="socials" src="./Instagram logo.png"></a>
+        </div>
+        <div id="socialmedia2">
+            <a href="https://twitter.com/Prathapagi50825" target="_blank"><h2 class="followus">Follow On</h2><img class="socials" src="./Twitter icon.png"></a>
+        </div>
+        <div id="socialmedia3">
+            <a href="https://www.facebook.com/anil.prathapagiri" target="_blank"><h2 class="followus">Follow On</h2><img class="socials" src="./Facebook icon.png"></a>
+        </div>
+
+        <div id="heading">
+            <h1 class="headingname">Reconnect to your world with </h1>
+            <h1 class="headingname">small group travel</h1>
+        </div>
+        <div id="search2">
+            <input id="searchboxmain" type="search" placeholder="Where's your next adventure?...">
+            <img id="search2img" src="./search.png">
+            <a href="#cardscont"><input id="explorebutt" type="button" value="Explore"></a>
+        </div>
+    </div>
+
+    <div id="textcont">
+        <div id="trekkpara">
+        <p id="Tpara">Trekking gives us time for reflection, which promotes <br>clarity. Clarity significantly improves decision <br>making abilities. Walking alone in mountains is <br>a great experience. Trails cut between mountains and <br>run by the riverside.</p>
+        </div>
+        <div id="imgbox">
+            <img id="imgtrekk" src="./trekking.jpg">
+        </div>
+    </div>
+
+    <div id="cardscont">
+        <div id="card1">
+            <div id="bookingdet">
+                <span class="bookingdetClose" onclick="bookingdetClose()">x</span>
+                <div id="Thank">
+                    <span class="closetick" onclick="closeTickCont()">x</span>
+                    <img id="tick" src="./check.png">
+                    <h4 id="thankhead">Thank You</h4>
+                    <p id="bookedmatter"></p>
+                </div>
+                <form id="bookingform">
+                    <h1>Book Your Trip</h1>
+                    <lable>Event Date From :</lable>
+                    <input id="fromdate" class="bookinginputs" type="date">
+                    <lable>To :</lable>
+                    <input id="todate" class="bookinginputs" type="date">
+                    <lable>Travel Mode</lable>
+                    <select id="wheelers" class="bookinginputs" >
+                        <option>2 wheeler</option>
+                        <option>4 wheeler</option>
+                        <option>6 wheeler</option>
+                    </select>
+                    <lable>Stay Type</lable>
+                    <select id="staying" class="bookinginputs" >
+                        <option>Home Stay</option>
+                        <option>Dual Stay</option>
+                    </select>
+                    <lable>Adults</lable>
+                    <select class="bookinginputs" id="memberPrice" onchange="priceVal()">
+                        <option>select members</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <h3 id="bookingPrice"></h3>
+                    <input id="bookinginputsbutt"  type="button" value="Book" onclick="formBook(),outputMatt(),openTickCont()">
+                </form>
+            </div>
+            <div id="kerelahead"><h1>KERALA</h1></div>
+            <div id="innercardscont">
+            <div class="innercards">Athirapalli</div>
+            <div class="innercards">MUNNAR</div>
+            <div class="innercards">KATHAKALI</div>
+            <div class="innercards">ALLEPPY</div>
+            </div>
+            <div id="iconscont">
+                <img class="innericons" src="icon1.png">
+                <img class="innericons" src="icon2.png">
+                <img class="innericons" src="icon3.png">
+                <img class="innericons" src="icon4.png">
+                <img class="innericons" src="icon5.png">
+            </div>
+            <div id="price">
+                <h2>Total Package 25000/-</h2>
+            </div>
+            <div>
+                <input id="butt" type="button" value="Book Now" onclick="book(),bookingdetOpen()" >
+                <a href="https://en.wikipedia.org/wiki/Tourism_in_Kerala" target="_blank"><input id="butt" type="button" value="About"></a>
+            </div>
+        </div>
+
+
+
+        <div id="card2">
+            <div id="bookingdet2">
+                <span class="bookingdetClose2" onclick="bookingdetClose2()">x</span>
+                <div id="Thank2">
+                    <span class="closetick2" onclick="closeTickCont2()">x</span>
+                    <img id="tick2" src="./check.png">
+                    <h4 id="thankhead2">Thank You</h4>
+                    <p id="bookedmatter2"></p>
+                </div>
+                <form id="bookingform2">
+                    <h1>Book Your Trip</h1>
+                    <lable>Event Date From :</lable>
+                    <input id="fromdate2" class="bookinginputs" type="date">
+                    <lable>To :</lable>
+                    <input id="todate2" class="bookinginputs" type="date">
+                    <lable>Travel Mode</lable>
+                    <select id="wheelers2" class="bookinginputs" >
+                        <option>2 wheeler</option>
+                        <option>4 wheeler</option>
+                        <option>6 wheeler</option>
+                    </select>
+                    <lable>Stay Type</lable>
+                    <select id="staying2" class="bookinginputs" >
+                        <option>Home Stay</option>
+                        <option>Dual Stay</option>
+                    </select>
+                    <lable>Adults</lable>
+                    <select class="bookinginputs" id="memberPrice2" onchange="priceVal2()">
+                        <option>select members</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <h3 id="bookingPrice2"></h3>
+                    <input id="bookinginputsbutt2" type="button" value="Book" onclick="formBook2(),outputMatt2(),openTickCont2()">
+                </form>
+            </div>    
+            <div id="kerelahead2"><h1>WAYANAD</h1></div>
+            <div id="innercardscont2">
+            <div class="innercards2">900 KANDI</div>
+            <div class="innercards2">ZIPLINE</div>
+            <div class="innercards2">SOOCHIPARA</div>
+            <div class="innercards2">SAFARI</div>
+            </div>
+            <div id="iconscont">
+                <img class="innericons" src="icon1.png">
+                <img class="innericons" src="icon2.png">
+                <img class="innericons" src="icon3.png">
+                <img class="innericons" src="icon4.png">
+                <img class="innericons" src="icon5.png">
+            </div>
+            <div id="price">
+                <h2>Total Package 17599/-</h2>
+            </div>
+            <div>
+                <input id="butt1" type="button" value="Book Now" onclick="book1(),bookingdetOpen2()">
+                <a href="https://en.wikipedia.org/wiki/Tourist_attractions_in_Wayanad" target="_blank"><input id="butt" type="button" value="About"></a>
+            </div>
+        </div>
+
+
+
+        <div id="card3">
+            <div id="bookingdet3">
+                <span class="bookingdetClose3" onclick="bookingdetClose3()">x</span>
+                <div id="Thank3">
+                    <span class="closetick3" onclick="closeTickCont3()">x</span>
+                    <img id="tick3" src="./check.png">
+                    <h4 id="thankhead3">Thank You</h4>
+                    <p id="bookedmatter3"></p>
+                </div>
+                <form id="bookingform3">
+                    <h1>Book Your Trip</h1>
+                    <lable>Event Date From :</lable>
+                    <input id="fromdate3" class="bookinginputs" type="date">
+                    <lable>To :</lable>
+                    <input id="todate3" class="bookinginputs" type="date">
+                    <lable>Travel Mode</lable>
+                    <select id="wheelers3" class="bookinginputs" >
+                        <option>2 wheeler</option>
+                        <option>4 wheeler</option>
+                        <option>6 wheeler</option>
+                    </select>
+                    <lable>Stay Type</lable>
+                    <select id="staying3" class="bookinginputs" >
+                        <option>Home Stay</option>
+                        <option>Dual Stay</option>
+                    </select>
+                    <lable>Adults</lable>
+                    <select class="bookinginputs" id="memberPrice3" onchange="priceVal3()">
+                        <option>select members</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <h3 id="bookingPrice3"></h3>
+                    <input id="bookinginputsbutt3" type="button" value="Book" onclick="formBook3(),outputMatt3(),openTickCont3()">
+                </form>
+            </div>    
+            <div id="kerelahead3"><h1>HIMACHAL</h1></div>
+            <div id="innercardscont3">
+            <div class="innercards3">SHIMAL</div>
+            <div class="innercards3">MANALI</div>
+            <div class="innercards3">KASOL</div>
+            <div class="innercards3">LAHAUL</div>
+            </div>
+            <div id="iconscont">
+                <img class="innericons" src="icon1.png">
+                <img class="innericons" src="icon2.png">
+                <img class="innericons" src="icon3.png">
+                <img class="innericons" src="icon4.png">
+                <img class="innericons" src="icon5.png">
+            </div>
+            <div id="price">
+                <h2>Total Package 22000/-</h2>
+            </div>
+            <div>
+                <input id="butt2" type="button" value="Book Now" onclick="book2(),bookingdetOpen3()">
+                <a href="https://en.wikipedia.org/wiki/Tourism_in_Himachal_Pradesh" target="_blank"><input id="butt" type="button" value="About"></a>
+            </div>
+        </div>
+
+
+
+        <div id="card4">
+            <div id="bookingdet4">
+                <span class="bookingdetClose4" onclick="bookingdetClose4()">x</span>
+                <div id="Thank4">
+                    <span class="closetick4" onclick="closeTickCont4()">x</span>
+                    <img id="tick4" src="./check.png">
+                    <h4 id="thankhead4">Thank You</h4>
+                    <p id="bookedmatter4"></p>
+                </div>
+                <form id="bookingform4">
+                    <h1>Book Your Trip</h1>
+                    <lable>Event Date From :</lable>
+                    <input id="fromdate4" class="bookinginputs" type="date">
+                    <lable>To :</lable>
+                    <input id="todate4" class="bookinginputs" type="date">
+                    <lable>Travel Mode</lable>
+                    <select id="wheelers4" class="bookinginputs" >
+                        <option>2 wheeler</option>
+                        <option>4 wheeler</option>
+                        <option>6 wheeler</option>
+                    </select>
+                    <lable>Stay Type</lable>
+                    <select id="staying4" class="bookinginputs" >
+                        <option>Home Stay</option>
+                        <option>Dual Stay</option>
+                    </select>
+                    <lable>Adults</lable>
+                    <select class="bookinginputs" id="memberPrice4" onchange="priceVal4()">
+                        <option>select members</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <h3 id="bookingPrice4"></h3>
+                    <input id="bookinginputsbutt4" type="button" value="Book" onclick="formBook4(),outputMatt4(),openTickCont4()">
+                </form>
+            </div>
+            <div id="kerelahead4"><h1>DANDELI</h1></div>
+            <div id="innercardscont4">
+            <div class="innercards4">V.FALLS</div>
+            <div class="innercards4">OM BEACH</div>
+            <div class="innercards4">Paradise Beach</div>
+            <div class="innercards4">HalfMoon Beach</div>
+            </div>
+            <div id="iconscont">
+                <img class="innericons" src="icon1.png">
+                <img class="innericons" src="icon2.png">
+                <img class="innericons" src="icon3.png">
+                <img class="innericons" src="icon4.png">
+                <img class="innericons" src="icon5.png">
+            </div>
+            <div id="price">
+                <h2>Total Package 19999/-</h2>
+            </div>
+            <div>
+                <input id="butt3" type="button" value="Book Now" onclick="book3(),bookingdetOpen4()">
+                <a href="https://en.wikipedia.org/wiki/Dandeli" target="_blank"><input id="butt" type="button" value="About"></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="travelstyle">
+       <h1 id="Tstylehead">TRAVEL  STYLE</h1>
+        <header>
+            <button id="left" onclick="sliderLeft()"><</button>
+            <h1 id="styletext"></h1>
+            <button id="right" onclick="sliderRight()">></button>
+        </header>
+        <input id="bgchange" type="text" placeholder="Type colour name to change bg-color" oninput="bgChange()">
+    </div>
+
+    
+    <div id="vlogscont">
+        <h1 id="vloghead">Travel Vlogs</h1>
+        <div id="vlogcont">
+            <iframe class="ytvideo" width="320" height="270" src="https://www.youtube.com/embed/yLE5bDX7M3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="ytvideo" width="320" height="270" src="https://www.youtube.com/embed/5G-NaCzvqhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="ytvideo" width="320" height="270" src="https://www.youtube.com/embed/h6SF6cmqN98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="ytvideo" width="320" height="270" src="https://www.youtube.com/embed/uSyHWJUdLPc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h1 id="guidehead">Our Guides</h1>
+        <div id="guidecont">
+            <div class="guidephoto">
+                <img class="photos" src="./anil.jpg">
+                <h2>Anil Prathapagiri</h2>
+                <p class="guidepara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos quibusdam modi maxime. Neque repudiandae eveniet dicta. Commodi eveniet corrupti veniam!</p>
+            </div>
+            <div class="guidephoto">
+                <img class="photos" src="./iliyas.jpg">
+                <h2>SK Iliyas</h2>
+                <p class="guidepara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos quibusdam modi maxime. Neque repudiandae eveniet dicta. Commodi eveniet corrupti veniam!</p>
+            </div>
+            <div class="guidephoto">
+                <img class="photos" src="./pavan.jpg">
+                <h2>Pavan Kumar</h2>
+                <p class="guidepara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos quibusdam modi maxime. Neque repudiandae eveniet dicta. Commodi eveniet corrupti veniam!</p>
+            </div>
+            <div class="guidephoto">
+                <img class="photos" src="./balaji.jpg">
+                <h2>Balaji</h2>
+                <p class="guidepara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos quibusdam modi maxime. Neque repudiandae eveniet dicta. Commodi eveniet corrupti veniam!</p>
+            </div>
+            <div class="guidephoto">
+                <img class="photos" src="./sreenath.jpg">
+                <h2>Sreenath</h2>
+                <p class="guidepara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos quibusdam modi maxime. Neque repudiandae eveniet dicta. Commodi eveniet corrupti veniam!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="cantactCont">
+        <div id="emailbox">
+            <input id="EmailText" type="email" placeholder="Enter Email">
+            <input id="Sbutt" type="button" value="Subscribe" onclick="Subscribe()">
+            <img id="bellIcon" src="./bell.png" onclick="bell()">
+            <span><img id="bellIcon2" src="./bell (1).png"></span>
+            <p id="subscribeThank"></p>
+        </div>
+        <div id="cantactBox">
+            <div class="adressBoxes"><img class="CantImgs" src="./location.png">Hyderabad</div>
+            <div class="adressBoxes"><img class="CantImgs" src="./address.png">Jspiders JNTU HYD</div>
+            <div class="adressBoxes"><img class="CantImgs" src="./letter.png">anilprathapagiri<br>9963@gmail.com</div>
+            <div class="adressBoxes"><img class="CantImgs" src="./telephone.png">7981627518</div>
+        </div>
+    </div>
+
+    <div id="bottomCont">
+         <div class="bottumDivs"><h2 class="bottHead">ABOUT US</h2><br><a href="#" class="bottAnc">About Anil Adventures</a><br><br><a href="#" class="bottAnc">Meet My Team</a><br><br><a href="#" class="bottAnc">Write for Us</a><br><br><a href="#" class="bottAnc">Cantact Us</a><br><br><a href="#" class="bottAnc">Copytight</a><br><br><a href="#" class="bottAnc">Privacy Policy</a></div>
+         <div class="bottumDivs"><h2 class="bottHead">TRAVEL TIPS</h2><br><a href="#" class="bottAnc">Start Here</a><br><br><a href="#" class="bottAnc">Travel Blog</a><br><br><a href="#" class="bottAnc">Distination Guide</a><br><br><a href="#" class="bottAnc">Travel Credit Cards</a></div>
+         <div class="bottumDivs"><h2 class="bottHead">COMMUNITY</h2><br><a href="#" class="bottAnc">Free Virtual Events</a><br><br><a href="#" class="bottAnc">Group Tours</a><br><br><a href="#" class="bottAnc">My Network</a></div>
+         <div class="bottumDivs"><h2 class="bottHead">FollowUs On</h2><br><a href="#" class="bottAnc">WhatsUp</a><br><br><a href="#" class="bottAnc">Instagram</a><br><br><a href="#" class="bottAnc">Twitter</a><br><br><a href="#" class="bottAnc">Facebook</a><br><br>
+        <div id="socialIconsInBott">
+            <a href="https://web.whatsapp.com/" target="_blank"><img class="iconBottom" src="./WhatsApp icon.png"></a>
+            <a href="https://instagram.com/anil_prathapagiri?igshid=NGExMmI2YTkyZg=="target="_blank"><img class="iconBottom" src="./Instagram logo.png"></a>
+            <a href="https://twitter.com/Prathapagi50825" target="_blank"><img class="iconBottom" src="./Twitter icon.png"></a>
+            <a href="https://www.facebook.com/anil.prathapagiri" target="_blank"><img class="iconBottom" src="./Facebook icon.png"></a>
+        </div>
+        </div>
+    </div>
+    <a id="gototop" href="#home" target="_top"><img id="top" src="./up-arrow.png"></a>
+</body>
+</html>
